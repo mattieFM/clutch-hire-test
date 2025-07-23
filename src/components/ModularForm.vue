@@ -49,14 +49,20 @@ import { defineProps } from "vue";
 import axios from "axios";
 import { ref } from "vue";
 
+/** @description an input field */
 interface field {
+  /** @description the title that should be displayed to the user for this field */
   title: string;
+  /** @description the <input type=""> */
   dataType: string;
+  /** @description the id that should be used for sending data to the url upon submission */
   id: string;
 }
 
 interface Props {
+  /** @description the title of this form */
   title: string;
+  /** @description an array of fields to render for this form */
   fields: field[];
   /**
    * @description the url endpoint to submit the data to
